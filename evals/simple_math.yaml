@@ -5,4 +5,4 @@ simple-math:
 simple-math.s1.simple-v0:
   class: evals.elsuite.test.match:TestMatch
   args:
-    samples_jsonl: evals/simple_math.jsonl
+    samples_jsonl: simple_math.jsonl
