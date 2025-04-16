@@ -25,6 +25,7 @@ except ImportError:
     print("  pip install -r requirements.txt")
     sys.exit(1)
 
+EVAL_NAME = "simple_math"
 
 RELATIVE_EVAL_YAML_PATH = "evals/simple_math.yaml"
 # Get the directory where this script (run_eval.py) is located
@@ -39,6 +40,8 @@ command = [
     "-m",                   
     "evals.cli.oaieval",    # The module path for the oaeval tool
     MODEL_TO_EVALUATE,      
+    EVAL_NAME,
+    "--registry_path",
     ABSOLUTE_EVAL_YAML_PATH          
 ]
 
