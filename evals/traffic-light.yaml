@@ -1,0 +1,8 @@
+traffic-light:
+  id: traffic-light.s1.simple-v0
+  description: Colors of a traffic light
+  metrics: [accuracy]
+traffic-light.s1.simple-v0:
+  class: evals.elsuite.basic.match:Match
+  args:
+    samples_jsonl: traffic-light.jsonl
