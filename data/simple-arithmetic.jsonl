@@ -1,1 +1,1 @@
-{"input": [{"role": "system", "content": "The user will ask a math question"}, {"role": "user", "content": "What is 2 + 2?"}], "ideal": "4"}
+{"input": [{"role": "system", "content": "The user is a math tutor asking a question to assess your understanding of basic arithmetic"}, {"role": "user", "content": "What is 2 + 2?"}], "ideal": "4"}
