@@ -15,9 +15,4 @@ This project demonstrates how to use [OpenAI's evals library](https://github.com
    export OPENAI_API_KEY=your-api-key-here
    ```
 
-## Running the Simple Math Eval
-
-Run the main script:
-```bash
-python3 main.py
-```
+## See the `examples` folder for examples on running evals
