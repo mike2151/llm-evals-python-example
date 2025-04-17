@@ -1,8 +1,0 @@
-simple-math:
-  id: simple-math.s1.simple-v0
-  description: Basic math test
-  metrics: [accuracy]
-simple-math.s1.simple-v0:
-  class: evals.elsuite.test.match:TestMatch
-  args:
-    samples_jsonl: simple_math.jsonl
