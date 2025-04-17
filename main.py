@@ -35,6 +35,7 @@ ABSOLUTE_EVAL_YAML_PATH = os.path.join(SCRIPT_DIR, RELATIVE_EVAL_YAML_PATH)
 
 # --- Construct the Command ---
 # The basic command is: python3 -m evals.cli.oaieval <model_name> <eval_yaml_path_or_name>
+# Example of correct command: python3 -m evals.cli.oaieval gpt-3.5-turbo simple-arithmetic --registry_path /Users/abelar/Desktop/llm-evals-python-example
 command = [
     sys.executable,         # Path to the current Python interpreter (e.g., /path/to/venv/bin/python)
     "-m",                   
