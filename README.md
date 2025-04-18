@@ -14,5 +14,10 @@ This project demonstrates how to use [OpenAI's evals library](https://github.com
    ```bash
    export OPENAI_API_KEY=your-api-key-here
    ```
+## Examples
+See the `examples` folder for examples on running evals
 
-## See the `examples` folder for examples on running evals
+1. [Evals through chat completion](examples/evals_through_chat_completion/chat_completion.py)
+
+2. [Evals through OpenAI Evals library](examples/evals_library/main.py)
+
