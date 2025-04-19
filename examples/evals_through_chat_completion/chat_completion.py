@@ -1,3 +1,4 @@
+import json
 from openai import OpenAI
 import os
 import sys
@@ -47,25 +48,18 @@ completion = client.chat.completions.create(
     tool_choice="auto"
 )
 
-print(completion)
+message = completion.choices[0].message
+# Check if the message has tool calls
+if message.tool_calls:
+    # Get the function call
+    function_call = message.tool_calls[0]
+    function_name = function_call.function.name
 
+    # Parse the arguments
+    function_args = json.loads(function_call.function.arguments)
 
-# client = OpenAI()
-
-# # structured output to make sure that the response is a number
-# completion: ChatCompletion = client.chat.completions.create(
-#     model="gpt-3.5-turbo",
-#     messages=[
-#         {
-#             "role": "system",
-#             "content": "You are a helpful assistant that provides answers as numbers only when appropriate."
-#         },
-#         {
-#             "role": "user",
-#             "content": "What is 2+2?"
-#         }
-#     ],
-#     response_format={"type": "text"}
-# )
-
-# print(completion.choices[0].message.content)
+    # If it's our equation function, evaluate it
+    if function_name == "get_equation_result":
+        equation = function_args.get("equation")
+        result = eval(equation)
+        print("Ran prompt for equation", equation, "Result:", result)
