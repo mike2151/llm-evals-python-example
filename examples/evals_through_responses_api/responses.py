@@ -24,6 +24,8 @@ tools = [{
     }
 }]
 
+prompt: str = "What is 2+2?"
+
 
 response = client.responses.create(
     model="gpt-3.5-turbo",
@@ -34,7 +36,7 @@ response = client.responses.create(
         },
         {
             "role": "user",
-            "content": "What is 2+2?"
+            "content": prompt
         }
     ],
     tools=tools
