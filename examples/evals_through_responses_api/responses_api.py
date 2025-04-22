@@ -39,7 +39,7 @@ prompts_to_evaluate: list[PromptToEvaluate] = [
 ]
 
 
-def get_equation_result(equation):
+def get_equation_result(equation: str) -> Any:
     return eval(equation)
 
 
