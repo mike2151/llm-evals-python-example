@@ -1,0 +1,1 @@
+To run the tests, you need to be in the `examples` directory
